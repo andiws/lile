@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 mongoose.Promise = Promise
 
-var dbUrl = 'mongodb+srv://user:user@clusterlearning-ncfa7.mongodb.net/test?retryWrites=true'
+var dbUrl = 'mongodb://user:user@clusterlearning-shard-00-00-ncfa7.mongodb.net:27017,clusterlearning-shard-00-01-ncfa7.mongodb.net:27017,clusterlearning-shard-00-02-ncfa7.mongodb.net:27017/test?ssl=true&replicaSet=ClusterLearning-shard-0&authSource=admin&retryWrites=true'
 
 var Message = mongoose.model('Message', {
     name: String,
